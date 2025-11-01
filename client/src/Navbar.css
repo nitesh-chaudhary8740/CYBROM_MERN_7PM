@@ -1,0 +1,99 @@
+/* Navbar.css */
+
+/* --- Overall Container Styles --- */
+.nav-container {
+    /* Use flexbox to align children (left-nav and right-nav) horizontally */
+    display: flex;
+    justify-content: space-between; /* Puts space between the left and right sections */
+    align-items: center; /* Vertically centers items */
+    
+    /* Basic styling for the navbar background and size */
+    background-color: #333; /* Dark background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    height: 60px; /* Fixed height for the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* --- Left Navigation Section Styles --- */
+.left-nav {
+    display: flex;
+    gap: 25px; /* Space between the 'span' items */
+    align-items: center;
+}
+
+/* New/Updated rule for the Link component (which is an <a> tag) inside the span */
+.left-nav span a {
+    /* Resetting default link styles */
+    color: inherit; /* Inherit the white color from the .nav-container */
+    text-decoration: none; /* Remove the underline */
+    
+    /* Applying interactive styles to the link itself */
+    font-size: 16px;
+    /* font-weight: 500; */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Apply hover effect directly to the link */
+.left-nav span a:hover {
+    color: #4CAF50; /* Green color on hover */
+}
+
+/* --- Right Navigation Section Styles --- */
+.right-nav {
+    display: flex;
+    gap: 10px; /* Space between the search input and button */
+    align-items: center;
+}
+
+.right-nav input[type="search"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Rounded corners for the input field */
+    font-size: 14px;
+    outline: none; /* Removes default focus outline */
+    min-width: 150px;
+}
+
+.right-nav input[type="search"]:focus {
+    border-color: #4CAF50; /* Highlight border on focus */
+}
+
+.right-nav button {
+    padding: 8px 15px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.right-nav button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+.right-nav button:active {
+    background-color: #3e8e41; /* Even darker on click/active state */
+}
+.is-active{
+   color:  #3e8e41; 
+    /* font-weight: bold; */
+
+}
+/* --- Responsive Considerations (Simple Example) --- */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column; /* Stacks the items vertically */
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    .left-nav {
+        margin-bottom: 10px; /* Space above the search section */
+        gap: 15px;
+    }
+}

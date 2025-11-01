@@ -1,0 +1,88 @@
+/* Home.css */
+
+/* --- Overall Container Styles --- */
+.home-container {
+    /* Centering the content both horizontally and vertically in the viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Taking up the full height of the viewport (minus any Navbar height) */
+    min-height: calc(100vh - 60px); /* Adjust '60px' based on actual Navbar height */
+    
+    /* Optional: A subtle background for the page */
+    background-color: #f4f7f9; 
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- Heading Style --- */
+.home-container h2 {
+    font-size: 2.5em; /* Large, welcoming text */
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* --- Options Container (for the buttons) --- */
+.home-options {
+    display: flex;
+    gap: 25px; /* Space between the two buttons */
+    margin-top: 20px;
+}
+
+/* --- Button Styles --- */
+.home-options button {
+    /* Basic button styling */
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid; /* Use a border to define the button shape */
+    transition: all 0.3s ease;
+    min-width: 150px; /* Ensures buttons have similar size */
+}
+
+/* Style for the 'Insert Data' button (similar to 'Sign Up') */
+.home-options button:first-child {
+    background-color: #4CAF50; /* Primary green color */
+    color: white;
+    border-color: #4CAF50;
+}
+
+.home-options button:first-child:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Style for the 'Display Data' button (similar to 'Sign In' or secondary action) */
+.home-options button:last-child {
+    background-color: transparent; /* Transparent background */
+    color: #333; /* Dark text color */
+    border-color: #ccc;
+}
+
+.home-options button:last-child:hover {
+    background-color: #e0e0e0; /* Light gray background on hover */
+    border-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Media Query for smaller screens --- */
+@media (max-width: 600px) {
+    .home-container h2 {
+        font-size: 1.8em;
+    }
+
+    .home-options {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 15px;
+    }
+    
+    .home-options button {
+        min-width: 250px; /* Make buttons wider for easier tapping */
+    }
+}

@@ -1,0 +1,98 @@
+/* Insert.css */
+
+/* --- Page Container Styles --- */
+.insert-container {
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    padding: 40px 20px;
+    background-color: #f4f7f9; /* Light background for contrast */
+    min-height: calc(100vh - 60px); /* Fill the rest of the viewport */
+}
+
+/* --- Form Styles --- */
+.insert-form {
+    /* Sets up the grid or column layout for the form fields */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Constrain form width for better readability */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Label Styles --- */
+.insert-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px; /* Space between label and input */
+    margin-top: 15px; /* Space above the label */
+}
+
+/* Ensure the first label doesn't have extra top margin */
+.insert-form label:first-child {
+    margin-top: 0;
+}
+
+/* --- Input and Select Field Styles --- */
+.insert-form input[type="text"],
+.insert-form input[type="number"],
+.insert-form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    -webkit-appearance: none; /* Removes default styling for select/input on some browsers */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.insert-form select {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* Focus State */
+.insert-form input:focus,
+.insert-form select:focus {
+    border-color: #4CAF50; /* Primary green color on focus */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2); /* Soft glow effect */
+}
+
+
+/* --- Submit Button (Placeholder for when you add one) --- */
+.insert-form button[type="submit"] {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.insert-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+/* --- Media Query for smaller screens --- */
+@media (max-width: 550px) {
+    .insert-container {
+        padding: 20px 10px;
+    }
+
+    .insert-form {
+        padding: 20px;
+    }
+}
